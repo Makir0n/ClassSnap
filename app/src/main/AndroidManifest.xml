@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.makir0n.classschedule" >
 
-    <uses-permission android:name="android.permission.CAMERA" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,6 +19,14 @@
         <activity
             android:name=".Edit"
             android:label="@string/title_activity_edit" >
+        </activity>
+        <activity
+            android:name=".Camera"
+            android:label="@string/title_activity_camera" >
+        </activity>
+        <activity
+            android:name=".StartCamera"
+            android:label="@string/title_activity_start_camera" >
         </activity>
     </application>
 
