@@ -12,11 +12,23 @@
         android:id="@+id/TextView02"
         android:textSize="24sp"
         android:text="時間割編集"
-        android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
     <Button
         android:id="@+id/backBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="編集完了"/>
+        android:text="編集完了"
+        android:layout_below="@+id/editText"
+        android:layout_alignEnd="@+id/editText" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="{曜日，時間，科目名，他}"
+        android:layout_below="@+id/TextView02"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

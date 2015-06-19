@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class Scedule extends ActionBarActivity {
@@ -37,6 +39,13 @@ public class Scedule extends ActionBarActivity {
                 startCheckPhotoActivity();
             }
         });
+
+        Edit ed = new Edit();
+
+        TextView tv = new TextView(this);
+        tv.setText(ed.getSchedule());
+        setContentView(tv);
+
     }
     private void startEditActivity(){
         Intent intent=new Intent(this,Edit.class);

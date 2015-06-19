@@ -7,9 +7,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 
 
 public class Edit extends ActionBarActivity {
+
+    String text;
+    String LOCAL_FILE = "classschedule.txt";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -23,7 +32,32 @@ public class Edit extends ActionBarActivity {
         });
     }
 
+   public String getSchedule(){
+       return text;
+   }
+
+    private void sampleFileOutput(){
+
+        OutputStream out;
+        try {
+            out = openFileOutput(LOCAL_FILE,MODE_PRIVATE|MODE_APPEND);
+            PrintWriter writer = new PrintWriter(new OutputStreamWriter(out,"UTF-8"));
+
+            //追記する
+            writer.append("write test");
+            writer.close();
+        } catch (IOException e) {
+            // TODO 自動生成された catch ブロック
+            e.printStackTrace();
+        }
+    }
+
     public void startTestIntentActivity(){
+
+        EditText editText = (EditText)findViewById(R.id.editText);
+        // 入力された文字を取得
+        text = editText.getText().toString();
+
         Intent intent=new Intent(this,Scedule.class);
         startActivityForResult(intent,0);
     }
