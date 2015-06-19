@@ -1,7 +1,6 @@
 package com.example.makir0n.classschedule;
 
 import android.content.Intent;
-import android.graphics.Camera;
 import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -21,7 +20,7 @@ public class Scedule extends ActionBarActivity {
         final Button EditBtn = (Button) findViewById(R.id.EditBtn);
         EditBtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                startSubActivity();
+                startEditActivity();
             }
         });
 
@@ -31,21 +30,28 @@ public class Scedule extends ActionBarActivity {
                 startCameraActivity();
             }
         });
+
+        final Button CheckPhotoBtn = (Button) findViewById(R.id.CheckPhotoBtn);
+        CheckPhotoBtn.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startCheckPhotoActivity();
+            }
+        });
     }
-    private void startSubActivity(){
+    private void startEditActivity(){
         Intent intent=new Intent(this,Edit.class);
-        startActivityForResult(intent,0);
-
+        startActivityForResult(intent, 0);
     }
-
     private void startCameraActivity(){
         Intent intent = new Intent();
         intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
         intent.addCategory(Intent.CATEGORY_DEFAULT);
         startActivityForResult(intent, 0);
     }
-
-
+    private void startCheckPhotoActivity(){
+        Intent intent=new Intent(this,CheckPhoto.class);
+        startActivityForResult(intent,0);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

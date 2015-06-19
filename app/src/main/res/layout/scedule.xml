@@ -28,7 +28,15 @@
         android:text="カメラ"
         android:gravity="center"
         android:layout_below="@+id/EditBtn"
-        android:layout_alignEnd="@+id/EditBtn" />
+        android:layout_alignParentStart="true" />
+
+    <Button android:id="@+id/CheckPhotoBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="黒板を見る"
+        android:gravity="center"
+        android:layout_below="@+id/CameraBtn"
+        android:layout_alignEnd="@+id/CameraBtn" />
 
 
 </RelativeLayout>
