@@ -2,21 +2,17 @@ package com.example.makir0n.classschedule;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 
 
@@ -47,33 +43,6 @@ public class Scedule extends Activity {
             // TODO 自動生成された catch ブロック
             schedule.setText("error");
         }
-
-        //label.setText(sb.toString());
-        //TextView tv = new TextView(this);
-        /*
-
-        try{
-            InputStream in = openFileInput(new Edit().LOCAL_FILE);
-            BufferedReader reader =
-                    new BufferedReader(new InputStreamReader(in,"UTF-8"));
-            String s;
-            TextView tv = (TextView) findViewById(R.id.SetClass);
-
-            while((s = reader.readLine())!= null){
-                tv.append(s);
-                tv.append("\n");
-            }
-            //tv.setText("Hello");
-            //setContentView(tv);
-
-            reader.close();
-        }catch(IOException e){
-            e.printStackTrace();
-            tv.setText("Hello");
-        }
-        */
-
-
         final Button CameraBtn = (Button) findViewById(R.id.CameraBtn);
         CameraBtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
