@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/TextView02"
+        android:id="@+id/TextTitle2"
         android:textSize="24sp"
         android:text="時間割編集"
         android:gravity="center_horizontal"
@@ -25,10 +25,11 @@
         android:layout_alignEnd="@+id/editText" />
 
     <EditText
+        android:lines="10"
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="{曜日，時間，科目名，他}"
-        android:layout_below="@+id/TextView02"
+        android:layout_below="@+id/TextTitle2"
         android:layout_alignParentEnd="true" />
 </RelativeLayout>

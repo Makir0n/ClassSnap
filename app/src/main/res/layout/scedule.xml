@@ -16,6 +16,16 @@
         android:textSize="24sp"
         android:gravity="center_horizontal"/>
 
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/SetClass"
+        android:textSize="24sp"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/TextView01"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="111dp" />
+
     <Button android:id="@+id/EditBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,9 +47,8 @@
         android:layout_height="wrap_content"
         android:text="黒板を見る"
         android:gravity="center"
-        android:layout_below="@+id/TextView01"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="57dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
