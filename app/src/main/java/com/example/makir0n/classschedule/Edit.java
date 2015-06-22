@@ -75,6 +75,7 @@ public class Edit extends Activity {
     public void backScheduleActivity() {
         Intent intent = new Intent(this, Scedule.class);
         startActivityForResult(intent, 0);
+        finish();
     }
 
     @Override

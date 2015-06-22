@@ -88,20 +88,11 @@ public class Scedule extends Activity {
             }
         });
 
-        // 読み込み
-        //EditText editText = (EditText)findViewById(R.id.EditText01);
-        //SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
-        //editText.setText(sp.getString("SaveString", null), TextView.BufferType.NORMAL);
-        //Edit ed = new Edit();
-
-        //TextView tv = new TextView(this);
-        //tv.setText(ed.getSchedule());
-        //setContentView(tv);
-
     }
     private void startEditActivity(){
         Intent intent=new Intent(this,Edit.class);
         startActivityForResult(intent, 0);
+        finish();
     }
     private void startCameraActivity(){
         Intent intent = new Intent();
